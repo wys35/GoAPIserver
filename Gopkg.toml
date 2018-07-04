@@ -34,8 +34,9 @@
   unused-packages = true
 
 [metadata.heroku]
-  root-package = "github.com/wys35/"
+  root-package = "github.com/wys35/GoAPIserver"
   go-version = "go1.10"
   install = [ "./GoAPIserver" ]
   ensure = "false"
+  additional-tools = ["github.com/gin-gonic/gin"]
 
