@@ -11,6 +11,10 @@ func initializeRoutes() {
 		userRoutes.POST("/login", ensureNotLoggedIn(), performLogin)
 
 		userRoutes.GET("/logout", ensureLoggedIn(), logout)
+
+		userRoutes.GET("/register", ensureNotLoggedIn(), showRegistrationPage)
+
+		userRoutes.POST("/register", ensureNotLoggedIn(), register)
 	}
 
 	articleRoutes := router.Group("/article")
