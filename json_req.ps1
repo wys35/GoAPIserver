@@ -1,0 +1,1 @@
+invoke-restmethod -uri http://localhost:8080 -headers @{"Accept"= "application/json"}
