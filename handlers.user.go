@@ -33,6 +33,11 @@ func performLogin(c *gin.Context) {
 	}
 }
 
+func logout(c *gin.Context) {
+	c.SetCookie("token", "", -1, "", "", false, true)
+	c.Redirect(http.StatusTemporaryRedirect, "/")
+}
+
 func generateSessionToken() string {
 	return strconv.FormatInt(rand.Int63(), 16)
 }

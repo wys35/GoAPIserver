@@ -9,6 +9,8 @@ func initializeRoutes() {
 		userRoutes.GET("/login", ensureNotLoggedIn(), showLoginPage)
 
 		userRoutes.POST("/login", ensureNotLoggedIn(), performLogin)
+
+		userRoutes.GET("/logout", ensureLoggedIn(), logout)
 	}
 
 	articleRoutes := router.Group("/article")
